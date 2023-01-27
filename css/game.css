@@ -10,6 +10,33 @@
 .card {
   aspect-ratio: 3/4;  
   width: 100%;
+  background-color: #333;
   border-radius: 4px;
-  background-color: #333;  
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #39813A;
+  border-radius: 4px;
+}
+
+.front {
+  background-image: url('../image/beth.png');
+  transform: rotateY(180deg);
+}
+
+.back{
+  background-image: url('../image/back.png'); 
+  backface-visibility: hidden; 
+}
+
+.card:hover{
+  transform: rotateY(180deg);
 }
