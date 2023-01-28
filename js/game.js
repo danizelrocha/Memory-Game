@@ -20,7 +20,7 @@ const createElement = (tag, className) =>{
 }
 
 const revealCard = ({ target }) => {
-
+  target.parentNode.ClassList.add('reveal-card');
 }
 
 const createCard = (character) => {
