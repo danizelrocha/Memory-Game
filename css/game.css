@@ -36,6 +36,6 @@
   backface-visibility: hidden; 
 }
 
-.reveal-card{
+.reveal-card {
   transform: rotateY(180deg);
 }

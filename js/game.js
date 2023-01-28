@@ -19,8 +19,46 @@ const createElement = (tag, className) =>{
   return element;
 }
 
+let firstCard = '';
+let secondCard = '';
+
+const checkCards = ()=> {
+  const firstCharacter = firstCard.getAttribute('data-character');
+  const secondCharacter = secondCard.getAttribute('data-character');
+
+  if(firstCharacter == secondCharacter){
+
+
+  }else{
+    setTimeout(() => {
+      firstCard.classList.remove('reveal-card');
+      secondCard.classList.remove('reveal-card');
+
+    }, 1000);
+    
+  }
+
+}
+
 const revealCard = ({ target }) => {
-  target.parentNode.ClassList.add('reveal-card');
+
+  if(target.parentNode.className.includes('reveal-card')) {
+    return;
+  }
+
+  if(firstCard ==''){
+
+    target.parentNode.classList.add('reveal-card');
+    firstCard = target.parentNode;
+
+  } else if (secondCard ==''){
+
+    target.parentNode.classList.add('reveal-card');
+    secondCard = target.parentNode;
+
+    checkCards();
+
+  }
 }
 
 const createCard = (character) => {
@@ -30,10 +68,12 @@ const createCard = (character) => {
   const back = createElement('div', 'face back');
 
   front.style.backgroundImage = `url('../image/${character}.png')`;
+
   card.appendChild(front);
   card.appendChild(back);
 
   card.addEventListener('click', revealCard);
+  card.setAttribute('data-character', character) 
 
   return card;
 }
