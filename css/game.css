@@ -1,10 +1,35 @@
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url('../image/bg.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px 23px;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8em;
+  width: 100%;
+  max-width: 500px;
+  padding: 6px;
+  margin: 0 0 8px;
+  border-radius: 6px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+  gap: 10px;
   width: 100%;
   max-width: 500px;
-  margin: 15px auto;
+  margin: 0px auto;
 }
 
 .card {
