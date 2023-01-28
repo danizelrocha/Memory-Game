@@ -34,6 +34,10 @@ const checkCards = ()=> {
       firstCard.classList.remove('reveal-card');
       secondCard.classList.remove('reveal-card');
 
+      firstCard ='';
+      secondCard = '';
+    
+
     }, 1000);
     
   }
