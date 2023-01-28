@@ -25,29 +25,31 @@ let firstCard = '';
 let secondCard = '';
 
 const checkEndGame = () => {
-  const disabledCard = document.querySelectorAll('.disabled-card');
+  const disabledCards = document.querySelectorAll('.disabled-card');
 
-  if(disabledCard.length == 20){
-    clearInterval( this.loop);
-    alert(`Parabéns', ${spanPlayer.innerHTML}! Seu tempo foi:${timer.innerHTML}`);
+  if(disabledCards.length === 20){
+    clearInterval(this.loop);
+    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
   }
 }
 
-const checkCards = ()=> {
+const checkCards = () => {
   const firstCharacter = firstCard.getAttribute('data-character');
   const secondCharacter = secondCard.getAttribute('data-character');
 
   if(firstCharacter == secondCharacter){
+
     firstCard.firstChild.classList.add('disabled-card');
     secondCard.firstChild.classList.add('disabled-card');
 
     firstCard ='';
-    secondCard = '';
+    secondCard ='';
 
     checkEndGame();
 
   }else{
     setTimeout(() => {
+
       firstCard.classList.remove('reveal-card');
       secondCard.classList.remove('reveal-card');
 
@@ -64,12 +66,12 @@ const revealCard = ({ target }) => {
     return;
   }
 
-  if(firstCard ==''){
+  if(firstCard ===''){
 
     target.parentNode.classList.add('reveal-card');
     firstCard = target.parentNode;
 
-  } else if (secondCard ==''){
+  } else if (secondCard ===''){
 
     target.parentNode.classList.add('reveal-card');
     secondCard = target.parentNode;
@@ -112,7 +114,7 @@ const startTimer = () => {
   this.loop = setInterval(() => {
     const currentTime = +timer.innerHTML;
     timer.innerHTML = currentTime + 1;
-  },1000);
+  }, 1000);
 
 }
 
