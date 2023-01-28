@@ -28,7 +28,8 @@ const checkEndGame = () => {
   const disabledCard = document.querySelectorAll('.disabled-card');
 
   if(disabledCard.length == 20){
-    alert('Parabéns, você Venceu!');
+    clearInterval( this.loop);
+    alert(`Parabéns', ${spanPlayer.innerHTML}! Seu tempo foi:${timer.innerHTML}`);
   }
 }
 
