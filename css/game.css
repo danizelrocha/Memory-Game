@@ -3,15 +3,14 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
   width: 100%;
-  max-width: 800px;
-  margin: 100px auto;
+  max-width: 500px;
+  margin: 15px auto;
 }
 
 .card {
   aspect-ratio: 3/4;  
   width: 100%;
-  background-color: #333;
-  border-radius: 4px;
+  border-radius: 6px;
   position: relative;
   transition: all 400ms ease;
   transform-style: preserve-3d;
@@ -24,7 +23,8 @@
   background-size: cover;
   background-position: center;
   border: 2px solid #39813A;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: all 400ms ease;
 }
 
 .front {

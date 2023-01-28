@@ -22,13 +22,26 @@ const createElement = (tag, className) =>{
 let firstCard = '';
 let secondCard = '';
 
+const checkEndGame = () => {
+  const disabledCard = document.querySelectorAll('.disabled-card');
+
+  if(disabledCard.length == 20){
+    alert('Parabéns, você Venceu!!!');
+  }
+}
+
 const checkCards = ()=> {
   const firstCharacter = firstCard.getAttribute('data-character');
   const secondCharacter = secondCard.getAttribute('data-character');
 
   if(firstCharacter == secondCharacter){
-    firstCard.classList.add('disabled-card');
-    secondCard.classList.add('disabled-card');
+    firstCard.firstChild.classList.add('disabled-card');
+    secondCard.firstChild.classList.add('disabled-card');
+
+    firstCard ='';
+    secondCard = '';
+
+    checkEndGame();
 
   }else{
     setTimeout(() => {
