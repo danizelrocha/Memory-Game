@@ -27,7 +27,8 @@ const checkCards = ()=> {
   const secondCharacter = secondCard.getAttribute('data-character');
 
   if(firstCharacter == secondCharacter){
-
+    firstCard.classList.add('disabled-card');
+    secondCard.classList.add('disabled-card');
 
   }else{
     setTimeout(() => {
@@ -38,9 +39,7 @@ const checkCards = ()=> {
       secondCard = '';
     
     }, 500);
-    
   }
-
 }
 
 const revealCard = ({ target }) => {
