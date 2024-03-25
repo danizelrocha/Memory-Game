@@ -69,3 +69,27 @@ header{
   filter: saturate(0);
   opacity: 0.5;
 }
+
+button {
+  background-color: #00b5cc;
+  border: 3px solid #b2df28;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  max-width: 190px;
+  margin: 8px;
+  padding: 10px;
+  width: 100%;
+}
+
+button:disabled {
+  background-color: #eee;
+  border: 2px solid #969595;
+  color: #747373;
+  cursor: auto;
+}
+
+.rankings {
+  color: #e71620;
+}
