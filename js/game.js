@@ -3,7 +3,7 @@ const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 const characters = [
-    'beth', 'jerry', 'jessica', 'morty', 'pessoa-passaro', 
+    'beth', 'jerry', 'jessica', 'morty', 'pessoa-passaro',
     'pickle-rick', 'rick', 'summer', 'meeseeks', 'scroopy'
 ];
 
@@ -20,31 +20,31 @@ const createElement = (tag, className) => {
 
 // Função para verificar o fim do jogo
 const checkEndGame = () => {
-  const disabledCards = document.querySelectorAll('.disabled-card');
-  if (disabledCards.length === 20) {
-      clearInterval(this.loop);
-      const endTime = timer.innerHTML; // Obtém o tempo final do jogador
-      const playerName = localStorage.getItem('player'); // Obtém o nome do jogador
-      const playerTime = { name: playerName, time: endTime }; // Cria um objeto com o nome e tempo do jogador
-      let rankings = JSON.parse(localStorage.getItem('rankings')) || []; // Obtém os rankings do armazenamento local ou inicializa um array vazio
-      rankings.push(playerTime); // Adiciona o tempo do jogador aos rankings
-      rankings.sort((a, b) => a.time.localeCompare(b.time)); // Ordena os rankings pelo tempo
-      localStorage.setItem('rankings', JSON.stringify(rankings)); // Salva os rankings atualizados no armazenamento local
-      updateRankings(rankings); // Atualiza a exibição dos rankings na interface
-      document.getElementById('restartButton').disabled = false; // Habilita o botão de reinício
-  }
+    const disabledCards = document.querySelectorAll('.disabled-card');
+    if (disabledCards.length === 20) {
+        clearInterval(this.loop);
+        const endTime = timer.innerHTML; // Obtém o tempo final do jogador
+        const playerName = localStorage.getItem('player'); // Obtém o nome do jogador
+        const playerTime = { name: playerName, time: endTime }; // Cria um objeto com o nome e tempo do jogador
+        let rankings = JSON.parse(localStorage.getItem('rankings')) || []; // Obtém os rankings do armazenamento local ou inicializa um array vazio
+        rankings.push(playerTime); // Adiciona o tempo do jogador aos rankings
+        rankings.sort((a, b) => a.time.localeCompare(b.time)); // Ordena os rankings pelo tempo
+        localStorage.setItem('rankings', JSON.stringify(rankings)); // Salva os rankings atualizados no armazenamento local
+        updateRankings(rankings); // Atualiza a exibição dos rankings na interface
+        document.getElementById('restartButton').disabled = false; // Habilita o botão de reinício
+    }
 }
 
 
 const updateRankings = (rankings) => {
-  const topRankings = rankings.slice(0, 3); // Obtém os 3 melhores tempos
-  const rankingsList = document.querySelector('.rankings'); // Seleciona a lista de rankings na interface
-  rankingsList.innerHTML = ''; // Limpa a lista de rankings
-  topRankings.forEach((player, index) => {
-      const listItem = document.createElement('li'); // Cria um item de lista para cada ranking
-      listItem.textContent = `${index + 1}. ${player.name}: ${player.time}`; // Define o texto do item de lista com o nome e tempo do jogador
-      rankingsList.appendChild(listItem); // Adiciona o item de lista à lista de rankings na interface
-  });
+    const topRankings = rankings.slice(0, 3); // Obtém os 3 melhores tempos
+    const rankingsList = document.querySelector('.rankings'); // Seleciona a lista de rankings na interface
+    rankingsList.innerHTML = ''; // Limpa a lista de rankings
+    topRankings.forEach((player, index) => {
+        const listItem = document.createElement('li'); // Cria um item de lista para cada ranking
+        listItem.textContent = `${index + 1}. ${player.name}: ${player.time}`; // Define o texto do item de lista com o nome e tempo do jogador
+        rankingsList.appendChild(listItem); // Adiciona o item de lista à lista de rankings na interface
+    });
 }
 
 
@@ -105,7 +105,7 @@ const loadGame = () => {
         grid.appendChild(card);
     });
     document.getElementById('restartButton').disabled = true; // Desabilita o botão de reinício  
-  }
+}
 
 // Função para iniciar o temporizador
 const startTimer = () => {

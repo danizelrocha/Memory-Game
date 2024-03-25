@@ -1,4 +1,4 @@
-main{
+main {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -10,7 +10,7 @@ main{
   padding: 10px 0px 23px;
 }
 
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +33,7 @@ header{
 }
 
 .card {
-  aspect-ratio: 3/4;  
+  aspect-ratio: 3/4;
   width: 100%;
   border-radius: 6px;
   position: relative;
@@ -56,16 +56,16 @@ header{
   transform: rotateY(180deg);
 }
 
-.back{
-  background-image: url('../image/back.png'); 
-  backface-visibility: hidden; 
+.back {
+  background-image: url('../image/back.png');
+  backface-visibility: hidden;
 }
 
 .reveal-card {
   transform: rotateY(180deg);
 }
 
-.disabled-card{
+.disabled-card {
   filter: saturate(0);
   opacity: 0.5;
 }
