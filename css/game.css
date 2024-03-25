@@ -84,12 +84,14 @@ button {
 }
 
 button:disabled {
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.6);
   border: 2px solid #969595;
-  color: #747373;
+  color: #333;
   cursor: auto;
 }
 
 .rankings {
   color: #e71620;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
 }
