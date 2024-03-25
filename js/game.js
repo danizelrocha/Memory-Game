@@ -21,7 +21,7 @@ const createElement = (tag, className) => {
 // Função para verificar o fim do jogo
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
-  if (disabledCards.length === 2) {
+  if (disabledCards.length === 20) {
       clearInterval(this.loop);
       const endTime = timer.innerHTML; // Obtém o tempo final do jogador
       const playerName = localStorage.getItem('player'); // Obtém o nome do jogador
