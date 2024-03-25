@@ -109,14 +109,47 @@ const loadGame = () => {
 }
 
 
+/* // Detalhado passo a passo - Neste código, a função `startTimer` inicializa as variáveis seconds e minutes e então utiliza um `setInterval`
+ para incrementar os segundos a cada segundo. Quando os segundos atingem 60, eles são resetados para 0 e os minutos são incrementados. 
+ As variáveis são formatadas para garantir que os valores sejam exibidos no formato de tempo correto no elemento HTML com o ID timer.//
+
 const startTimer = () => {
+  let seconds = 0;
+  let minutes = 0;
 
   this.loop = setInterval(() => {
-    const currentTime = +timer.innerHTML;
-    timer.innerHTML = currentTime + 1;
-  }, 1000);
+    seconds++;
+    if (seconds === 60) {
+      seconds = 0;
+      minutes++;
+    }
 
+    const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    timer.innerHTML = `${formattedMinutes}:${formattedSeconds}`;
+  }, 1000);
+} */
+
+
+/* Neste código, utilizo o operador de módulo (%) para manter os segundos entre 0 e 59, 
+e a função `padStart` para garantir que os valores de minutos e segundos sejam exibidos com dois dígitos, 
+adicionando um zero à esquerda se necessário. Isso torna o código mais limpo e mais curto.
+*/
+
+const startTimer = () => {
+  let seconds = 0;
+  let minutes = 0;
+
+  this.loop = setInterval(() => {
+    seconds = (seconds + 1) % 60;
+    minutes = seconds === 0 ? minutes + 1 : minutes;
+
+    timer.innerHTML = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }, 1000);
 }
+
+
 
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem('player');
