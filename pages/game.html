@@ -1,33 +1,30 @@
+<!-----------------------------------------HTML DO JOGO----------------------------------------->
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Define a compatibilidade com o Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Define a escala inicial para dispositivos móveis -->
 
-    <link rel="shortcut icon" href="../image/brain.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../image/brain.png" type="image/x-icon" /> <!-- Ícone da página -->
 
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/game.css" />
+    <link rel="stylesheet" href="../css/reset.css" /> <!-- Importa a folha de estilos reset.css -->
+    <link rel="stylesheet" href="../css/game.css" /> <!-- Importa a folha de estilos game.css -->
 
-    <script defer src="../js/game.js"></script>
+    <script defer src="../js/game.js"></script> <!-- Importa o arquivo JavaScript game.js de forma assíncrona -->
 
-    <title>Jogo da Memória</title>
+    <title>Jogo da Memória</title> <!-- Título da página -->
   </head>
   <body>
     <main>
       <header>
-        <span class="player">Jogador 1</span>
-        <span>Tempo: <span class="timer">00:00</span></span>
+        <span class="player">Jogador 1</span> <!-- Span para exibir o nome do jogador -->
+        <span>Tempo: <span class="timer">00:00</span></span> <!-- Span para exibir o temporizador -->
       </header>
 
-      <div class="grid"></div>
-
-      <!-- Botão de reinício -->
-      <button id="restartButton" disabled>Reiniciar</button>
-
-      <!-- Lista de rankings -->
-      <ul class="rankings"></ul>
+      <div class="grid"></div> <!-- Div para a grade de cartas -->
+      <button class="restart" id="restartButton" disabled>Reiniciar</button> <!-- Botão de reinício -->
+      <ul class="rankings"></ul>  <!-- Lista de rankings -->
     </main>
   </body>
 </html>

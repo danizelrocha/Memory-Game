@@ -59,6 +59,7 @@ header {
 .back {
   background-image: url('../image/back.png');
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .reveal-card {
@@ -70,7 +71,7 @@ header {
   opacity: 0.5;
 }
 
-button {
+.restart {
   background-color: #00b5cc;
   border: 3px solid #b2df28;
   border-radius: 8px;
@@ -83,11 +84,11 @@ button {
   width: 100%;
 }
 
-button:disabled {
+.restart:disabled {
   background-color: rgba(255, 255, 255, 0.6);
   border: 2px solid #969595;
   color: #333;
-  cursor: auto;
+  cursor: not-allowed;
 }
 
 .rankings {

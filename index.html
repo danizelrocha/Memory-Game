@@ -1,29 +1,30 @@
+<!-----------------------------------------HTML DA TELA DE LOGIN----------------------------------------->
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Define a compatibilidade com o Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Define a escala inicial para dispositivos móveis -->
 
-    <link rel="shortcut icon" href="image/brain.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="image/brain.png" type="image/x-icon" /> <!-- Ícone da página -->
 
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/Login.css" />
+    <link rel="stylesheet" href="./css/reset.css" /> <!-- Importa a folha de estilos reset.css -->
+    <link rel="stylesheet" href="./css/Login.css" /> <!-- Importa a folha de estilos Login.css -->
 
-    <script defer src="./js/login.js"></script>
+    <script defer src="./js/login.js"></script> <!-- Importa o arquivo JavaScript login.js de forma assíncrona -->
 
-    <title>Memory Game</title>
+    <title>Memory Game</title> <!-- Título da página -->
   </head>
   <body>
-    <form class="login-form">
-      <div class="login_header">
-        <img src="./image/logo.png" alt="logo" />
-        <img src="./image/cerebro.jpg" alt="brain icon" />
-        <h1>Memory Game</h1>
+    <form class="login-form"> <!-- Formulário de login -->
+      <div class="login_header"> <!-- Cabeçalho do formulário -->
+        <img src="./image/logo.png" alt="logo" /> <!-- Imagem do logo -->
+        <img src="./image/cerebro.jpg" alt="brain icon" /> <!-- Ícone de cérebro -->
+        <h1>Memory Game</h1> <!-- Título do jogo -->
       </div>
 
-      <input type="text" class="login_input" placeholder="Name" />
-      <button type="submit" class="login_button" disabled>Play</button>
+      <input type="text" class="login_input" placeholder="Name" /> <!-- Campo de entrada para o nome do jogador -->
+      <button type="submit" class="login_button" disabled>Play</button> <!-- Botão de envio do formulário desabilitado por padrão -->
     </form>
   </body>
 </html>

@@ -21,7 +21,7 @@ const createElement = (tag, className) => {
 // Função para verificar o fim do jogo
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
-    if (disabledCards.length === 20) {
+    if (disabledCards.length === 2) {
         clearInterval(this.loop);
         const endTime = timer.innerHTML; // Obtém o tempo final do jogador
         const playerName = localStorage.getItem('player'); // Obtém o nome do jogador
@@ -137,7 +137,5 @@ window.onload = () => {
     loadGame(); // Carrega o jogo
     // Adiciona o botão de reinício ao corpo do documento
     const restartButton = document.createElement('button');
-    restartButton.textContent = 'Reiniciar';
     restartButton.addEventListener('click', restartGame);
-    document.body.appendChild(restartButton);
 }
