@@ -12,16 +12,31 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .agradecimentos {
+        main {
+            align-items: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        }
+
+        .agradecimentos {
+            text-align: center;
+            margin-bottom: 15px;
         }
 
         .nomes > span {
             display: block;
-            text-align: center;
+        }
+
+        .button {
+            background-color: #00b5cc;
+            border: 3px solid #b2df28;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            max-width: 300px;
+            padding: 15px;
+            width: 100%;
         }
 
     </style>
@@ -29,30 +44,51 @@
     <title>Jogo da Memória</title>
 </head>
 <body>
-    <div class="agradecimentos">
-        <h1>Agradecimentos</h1>
-        <div class="nomes">
-            <span>Henrique Mariano</span>
-            <span>Matheus Botsis</span>
-            <span>Giovanne Doin</span>
-            <span>João Pedro Silva</span>
-            <span>Vitor Empada</span>
-            <span>Luiz Henrique Silva</span>
-            <span>Sofia Torquato</span>
-            <span>Juliana Cremonese</span>
-            <span>Gabriela Cardoso</span>
-            <span>Bruna Peixoto</span>
-            <span>Luana Perez</span>
-            <span>Isabel Silva</span>
-            <span>Gabriel Serqueira</span>
-            <span>Fernanda Silva</span>
-            <span>Rebeca Silva</span>
-            <span>Alana Silva</span>
-            <span>Mariana Silva</span>
-            <span>Pietra Silva</span>
-            <span>Gabriel Fraga</span>
-            <span>Débora Ninja</span>
+    <main>
+        <div class="agradecimentos">
+            <h1>Agradecimentos</h1>
+            <div class="nomes">
+                <span>Allana Peixoto Candido e Silva</span>
+                <span>Bruna Peixoto Paiva</span>
+                <span>Caio Cifarelli Cardoso Silva</span>
+                <span>Fernanda Torero da Silva Campos</span>
+                <span>Gabriel Fraga Soares</span>
+                <span>Gabriel Mendes Dias de Cerqueira</span>
+                <span>Gabriela Cardoso Pereira</span>
+                <span>Giovanne Soares Doin</span>
+                <span>Henrique Mariano da Fonseca</span>
+                <span>Isabel Hoyer Santos Tenoury Pérez</span>
+                <span>Isabella Nicolosi Veloso</span>
+                <span>Isabella Di Pietro Spera</span>
+                <span>Isabelly Augusto Pereira dos Santos</span>
+                <span>João Pedro Giraldez Pereira Vilar Silva</span>
+                <span>Juliana Cremoneze Pacheco Jordão Neves</span>
+                <span>Luana Pelisson Peres</span>
+                <span>Luiz Henrique Alves Santos</span>
+                <span>Luiza Rocha de Campos</span>
+                <span>Manoela Marcílio de Freitas Rodrigues Stoffel</span>
+                <span>Marco Aurelio Branco</span>
+                <span>Mariana Marçal Gea</span>
+                <span>Matheus Botsis Siqueira</span>
+                <span>Pietra Gasparelli Teixeira</span>
+                <span>Pietra Pala Diniz</span>
+                <span>Pietra Santana Hollanders</span>
+                <span>Rebeca Pinheiro Conceição</span>
+                <span>Sofia Araujo Torquato</span>
+                <span>Vitor Zezilia Impaléa</span>
+            </div>
         </div>
-    </div>
+        <button type="button" class="button">Voltar</button>
+    </main>
+
+    <script>
+        
+        const handleButton = () => {
+            window.location = '../index.html'
+        }
+
+        const button = document.querySelector('.button')
+        button.addEventListener('click', handleButton)
+    </script>
 </body>
 </html>
