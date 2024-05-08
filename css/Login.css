@@ -1,9 +1,14 @@
-.login-form {
+main {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+}
+
+.login-form {
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .login_header {
@@ -35,7 +40,7 @@
   padding: 8px;
 }
 
-.login_button {
+.button {
   background-color: #00b5cc;
   border: 3px solid #b2df28;
   border-radius: 8px;
@@ -47,7 +52,7 @@
   width: 100%;
 }
 
-.login_button:disabled {
+.button:disabled {
   background-color: #eee;
   border: 2px solid #969595;
   color: #aaa;
